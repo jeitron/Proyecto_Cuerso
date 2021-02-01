@@ -1,0 +1,75 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/listarusu']">  <button type="submit" class="btn btn-primary mr-2"> Administar usuarios </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/registrarpro']" > <button type="submit" class="btn btn-primary mr-2"> Registrar producto</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/listarpro']" ><button type="submit" class="btn btn-primary mr-2"> Modificar producto</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/ventas']" > <button type="submit" class="btn btn-primary mr-2"> Ventas Facturadas</button></a>
+    </div>
+    <div>
+       <a class="text-white" [routerLink]="['/registrarnot']" >   <button type="submit" class="btn btn-primary mr-2">Noticias</button></a>
+    </div>
+    <div>
+      <a class="text-white" [routerLink]="['/slider']" >   <button type="submit" class="btn btn-primary mr-2"> Slider</button></a>
+    </div>
+   
+
+</div>
+<br>
+
+<h2 class="text-center">REGISTRAR UN NUEVO PRODUCTO </h2>
+<br>
+
+<form #registrodeproductoForm="ngForm" (ngSubmit)="registrarpro()">
+
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Selecciona el tipo de producto</label>
+    <select class="form-control" id="tipo" name="tipo" #tipo="ngModel"
+    [(ngModel)]="pro.tipo">
+      <option value="comida">Concentrados y alimentos</option>
+      <option value="medicina">Medicina veterinaria</option>
+      <option value="veneno">Fungicidas y pesticidas</option>
+      <option value="herramientas">Herramientas</option>
+      <option value="animales">Animales vivos</option>
+      <option value="maquinaria">Maquinaria</option>
+      <option value="talabarteria">Talabarteria</option>
+      <option value="semillas">Semillas</option>
+      <option value="servicio">Servicios externos</option>
+    </select>
+  </div>
+
+<div class="form-group">
+    <label for="nombre">Nombre Producto</label>
+    <input type="text" class="form-control" id="nombrep" name="nombrep" #nombrep="ngModel"
+    [(ngModel)]="pro.nombrep">
+</div>
+
+<div class="form-group">
+    <label for="precio">Precio</label>
+    <input type="text" class="form-control" id="precio" name="precio" #precio="ngModel"
+    [(ngModel)]="pro.precio">
+</div>
+
+<div class="form-group">
+    <label for="cantidad">Cantidad</label>
+    <input type="text" class="form-control" id="cantidad" name="cantidad" #cantidad="ngModel"
+    [(ngModel)]="pro.cantidad">
+</div>
+<div class="form-group">
+    <label for="descrip">Descripción del producto </label>
+    <textarea class="form-control" id="descripcion" name="descripcion" #descripcion="ngModel"
+    [(ngModel)]="pro.descripcion" rows="8"></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Registrar </button>
+</form>

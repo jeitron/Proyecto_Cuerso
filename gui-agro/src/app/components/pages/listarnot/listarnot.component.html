@@ -1,0 +1,68 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/listarusu']">  <button type="submit" class="btn btn-primary mr-2"> Administar usuarios </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/registrarpro']" > <button type="submit" class="btn btn-primary mr-2"> Registrar producto</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/listarpro']" ><button type="submit" class="btn btn-primary mr-2"> Modificar producto</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/ventas']" > <button type="submit" class="btn btn-primary mr-2"> Ventas Facturadas</button></a>
+    </div>
+    <div>
+       <a class="text-white" [routerLink]="['/listarnot']" >   <button type="submit" class="btn btn-primary mr-2">Noticias</button></a>
+    </div>
+    <div>
+      <a class="text-white" [routerLink]="['/slider']" >   <button type="submit" class="btn btn-primary mr-2"> Slider</button></a>
+    </div>
+    
+
+</div>
+
+<br>
+  <h2 class="text-center">LISTA DE NOTICIAS</h2>
+  <br>
+  <div class="d-flex flex-row mb-3">
+
+<form #listadeusuarioForm="ngForm" (ngSubmit)="listarnot()" >  
+    <button type="submit" class="btn btn-primary mr-2">Listar noticia</button>
+  </form>
+
+  <a class="text-white" [routerLink]="['/registrarnot']" >   <button type="submit" class="btn btn-primary mr-2"> Crear Notcia</button></a>
+
+  </div>
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th id="titulo" scope="col">Titulo</th>
+        <th  scope="col">Fecha</th>      
+        <th id="contenido"  scope="col">Contenido</th>
+        <th  scope="col">Acción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let not of listanot">       
+        <td>{{not.titulo}}</td>
+        <td>{{not.fecha}}</td>
+        <td><p class="text-break"> {{not.contenido}}</p> </td>
+             
+        
+        <td > 
+          <button class="btn btn-danger" [routerLink]="['/eliminarnot']" (click)="eliminarnot(not._id)">Eliminar</button>     
+        </td>
+        
+
+      </tr>
+     
+    </tbody>
+  </table>
+

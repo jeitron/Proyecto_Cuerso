@@ -1,0 +1,56 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/listarusu']">  <button type="submit" class="btn btn-primary mr-2"> Administar usuarios </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/registrarpro']" > <button type="submit" class="btn btn-primary mr-2"> Registrar producto</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/listarpro']" ><button type="submit" class="btn btn-primary mr-2"> Modificar producto</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/ventas']" > <button type="submit" class="btn btn-primary mr-2"> Ventas Facturadas</button></a>
+    </div>
+    <div>
+       <a class="text-white" [routerLink]="['/listarnot']" >   <button type="submit" class="btn btn-primary mr-2">Noticias</button></a>
+    </div>
+    <div>
+      <a class="text-white" [routerLink]="['/slider']" >   <button type="submit" class="btn btn-primary mr-2"> Slider</button></a>
+    </div>
+   
+</div>
+
+<br>
+<h2 class="text-center">CREA NUEVA NOTICIA </h2>
+<br>
+  <div>
+
+  <a class="text-white" [routerLink]="['/listarnot']" >   <button type="submit" class="btn btn-primary mr-2"> Listar Notcia</button></a>
+  <a class="text-white" [routerLink]="['/registrarnot']" >   <button type="submit" class="btn btn-primary mr-2"> Crear Notcia</button></a>
+
+  </div>
+<br>
+
+
+
+<form #registrodenoticiaForm="ngForm" (ngSubmit)="registrarnot()">
+
+<div class="form-group">
+    <label for="nombre">Titulo de la noticia</label>
+    <input type="text" class="form-control" id="titulo" name="titulo" #titulo="ngModel"
+    [(ngModel)]="not.titulo">
+</div>
+
+<div class="form-group">
+    <label for="descrip">Cuerpo de la noticia</label>
+    <textarea class="form-control" id="contenido" name="contenido" #contenido="ngModel"
+    [(ngModel)]="not.contenido" rows="8"></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Registrar </button>
+</form>

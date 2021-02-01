@@ -1,0 +1,54 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/usupanel']">  <button type="submit" class="btn btn-primary mr-2"> Datos del usuario </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/cambiarpass']" > <button type="submit" class="btn btn-primary mr-2"> Cambiar contraseña</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/comprausu']" ><button type="submit" class="btn btn-primary mr-2"> Compras realizadas</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/favoritos']" > <button type="submit" class="btn btn-primary mr-2"> Favoritos</button></a>
+    </div>    
+
+</div>
+
+
+
+<br>
+
+<br>
+
+<H2 class="text-center"> CAMBIA CONTRASEÑA</H2>
+<br>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-6 ">
+
+        <form #registrodeusuarioForm="ngForm">
+
+            <div class="form-group">
+                <label for="">Contraseña actual</label>
+                <input type="text" class="form-control" id="documento" name="documento" placeholder="Contraseña actual">
+            </div>
+
+            <div class="form-group">
+                <label for="">Contraseña nueva</label>
+                <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña nueva">
+            </div>
+
+            <div class="form-group">
+                <label for="">Repita contraseña nueva</label>
+                <input type="password" class="form-control" id="pass" name="pass" placeholder="contraseña nueva">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Actualizar contraseña </button>
+        </form>
+    </div>
+</div>

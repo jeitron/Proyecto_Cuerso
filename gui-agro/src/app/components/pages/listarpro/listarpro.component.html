@@ -1,0 +1,80 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/listarusu']">  <button type="submit" class="btn btn-primary mr-2"> Administar usuarios </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/registrarpro']" > <button type="submit" class="btn btn-primary mr-2"> Registrar producto</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/listarpro']" ><button type="submit" class="btn btn-primary mr-2"> Modificar producto</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/ventas']" > <button type="submit" class="btn btn-primary mr-2"> Ventas Facturadas</button></a>
+    </div>
+    <div>
+       <a class="text-white" [routerLink]="['/registrarnot']" >   <button type="submit" class="btn btn-primary mr-2">Noticias</button></a>
+    </div>
+    <div>
+      <a class="text-white" [routerLink]="['/slider']" >   <button type="submit" class="btn btn-primary mr-2"> Slider</button></a>
+    </div>
+    
+
+</div>
+<br>
+
+<div >
+   
+      <div class="form-group">
+    <form #listadeproductoForm="ngForm" (ngSubmit)="listarpro()">
+   
+      <label for="">Bucar por nombre</label>
+      <input type="text" class="form-control" id="listapro" name="listapro" #listdoc="ngModel" [(ngModel)]="buscarnom" placeholder="Ingresa el nombre del producto a buscar">    
+  
+    <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+
+</form>
+    </div>  
+<form #listadeproductoForm="ngForm" (ngSubmit)="listarp()">  
+  <button type="submit" class="btn btn-primary mb-3">Listar todos</button>
+</form>
+
+  </div>
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Tipo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Descripcion</th>
+           
+        <th class="text-center" scope="col" colspan="2">Acción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let pro of listapro">       
+        <td>{{pro.tipo}}</td>
+        <td>{{pro.nombrep}}</td>
+        <td>{{pro.precio}}</td>
+        <td>{{pro.cantidad}}</td>
+        <td class="text-break">{{pro.descripcion}}</td>
+              
+        <td>        
+          <button class="btn btn-primary" [routerLink]="['/actualizarpro']" (click)="traerpro(pro)">Actualizar</button>
+        </td>
+        <td> 
+          <button class="btn btn-danger" [routerLink]="['/eliminarpro']" (click)="eliminarpro(pro._id)">Eliminar</button>     
+        </td>
+        
+
+      </tr>
+     
+    </tbody>
+  </table>

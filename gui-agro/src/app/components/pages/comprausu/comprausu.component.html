@@ -1,0 +1,68 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/usupanel']">  <button type="submit" class="btn btn-primary mr-2"> Datos del usuario </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/cambiarpass']" > <button type="submit" class="btn btn-primary mr-2"> Cambiar contraseña</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/comprausu']" ><button type="submit" class="btn btn-primary mr-2"> Compras realizadas</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/favoritos']" > <button type="submit" class="btn btn-primary mr-2"> Favoritos</button></a>
+    </div>    
+
+</div>
+
+
+
+<br>
+
+<br>
+
+<H2 class="text-center">    COMPRAS REALIZADAS</H2>
+<br>
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Id factura</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Productos</th>            
+        <th scope="col" >Acción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>12354</td>
+        <td>04/05/2021</td>
+        <td>Pala de acero</td> 
+        <td>        
+          <button class="btn btn-primary" >Ver factura</button>
+        </td> 
+     </tr>
+     <tr>
+        <td>6645</td>
+        <td>07/05/2021</td>
+        <td>Semillas de col, guantes</td> 
+        <td>        
+          <button class="btn btn-primary" >Ver factura</button>
+        </td> 
+     </tr>
+     <tr>
+        <td>67454</td>
+        <td>05/06/2021</td>
+        <td>Guadaña, aceite</td> 
+        <td>        
+          <button class="btn btn-primary" >Ver factura</button>
+        </td> 
+     </tr>
+     
+    </tbody>
+  </table>
+

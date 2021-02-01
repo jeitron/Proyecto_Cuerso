@@ -1,0 +1,85 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+  <div>       
+     <a class="text-white" [routerLink]="['/listarusu']">  <button type="submit" class="btn btn-primary mr-2"> Administar usuarios </button></a>
+  </div>
+  <div>
+      <a class="text-white" [routerLink]="['/registrarpro']" > <button type="submit" class="btn btn-primary mr-2"> Registrar producto</button></a>
+  </div>
+
+  <div>
+       <a class="text-white" [routerLink]="['/listarpro']" ><button type="submit" class="btn btn-primary mr-2"> Modificar producto</button></a>
+  </div>
+  <div>
+      <a class="text-white" [routerLink]="['/ventas']" > <button type="submit" class="btn btn-primary mr-2"> Ventas Facturadas</button></a>
+  </div>
+  <div>
+     <a class="text-white" [routerLink]="['/registrarnot']" >   <button type="submit" class="btn btn-primary mr-2">Noticias</button></a>
+  </div>
+  <div>
+    <a class="text-white" [routerLink]="['/slider']" >   <button type="submit" class="btn btn-primary mr-2"> Slider</button></a>
+  </div>
+ 
+
+</div>
+  <br>
+  <h2 class="text-center">DATOS DE LOS USUARIOS</h2>
+  <br>
+  <div>
+    <form #listadeusuarioForm="ngForm" (ngSubmit)="listarusu()">
+    <div class="form-group">
+      <label for="">Bucar por documento</label>
+      <input type="text" class="form-control" id="listdoc" name="listdoc" #listdoc="ngModel" [(ngModel)]="buscardoc" placeholder="Documento a buscar">    
+    </div>  
+    <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+</form>
+
+<form #listadeusuarioForm="ngForm" (ngSubmit)="listar()">  
+  <button type="submit" class="btn btn-primary mb-3">Listar todos</button>
+</form>
+
+  </div>
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Documento</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Direciión</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Departemento</th>
+        <th scope="col">Contraseña</th>     
+        <th scope="col">Rol</th>    
+        <th class="text-center" scope="col" colspan="2">Acción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let usu of listausu">       
+        <td>{{usu.documento}}</td>
+        <td>{{usu.nombre}}</td>
+        <td>{{usu.telefono}}</td>
+        <td>{{usu.correo}}</td>
+        <td>{{usu.direccion}}</td>
+        <td>{{usu.ciudad}}</td>
+        <td>{{usu.departamento}}</td>
+        <td>{{usu.pass}}</td>   
+        <td>{{usu.rol}}</td>   
+
+        <td>        
+          <button class="btn btn-primary" [routerLink]="['/actualizarusu']" (click)="traerusu(usu)">Actualizar</button>
+        </td>
+        <td> 
+          <button class="btn btn-danger" [routerLink]="['/eliminarusu']" (click)="eliminarusu(usu._id)">Eliminar</button>     
+        </td>
+        
+
+      </tr>
+     
+    </tbody>
+  </table>

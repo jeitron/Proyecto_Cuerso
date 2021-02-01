@@ -1,0 +1,73 @@
+
+
+<br>
+
+<br>
+
+<H2 class="text-center"> FORMUALRIO DE REGISTRO</H2>
+<br>
+<div class="row d-flex justify-content-center">
+  <div class="col-6 ">
+
+    <form #registrodeusuarioForm="ngForm" (ngSubmit)="actusu()">
+      <div class="form-group">
+        <label for="">Documento</label>
+        <input type="text" class="form-control" id="documento" name="documento" #documento="ngModel"
+          [(ngModel)]="usustorage.documento" placeholder="Documento del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" #nombre="ngModel" [(ngModel)]="usustorage.nombre"
+          placeholder="Nombre del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" #telefono="ngModel"
+          [(ngModel)]="usustorage.telefono" placeholder="Telefono de contacto del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Correo</label>
+        <input type="email" class="form-control" id="correo" name="correo" #correo="ngModel" [(ngModel)]="usustorage.correo"
+          placeholder="Correo de contacto del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" #direccion="ngModel"
+          [(ngModel)]="usustorage.direccion" placeholder="Dirección del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" name="ciudad" #ciudad="ngModel" [(ngModel)]="usustorage.ciudad"
+          placeholder="Ciudad de ubicacion del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Departamento</label>
+        <input type="text" class="form-control" id="departamento" name="departamento" #departamento="ngModel"
+          [(ngModel)]="usustorage.departamento" placeholder="Departamento de ubicacion del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Contraseña</label>
+        <input type="text" class="form-control" id="pass" name="pass" #pass="ngModel" [(ngModel)]="usustorage.pass"
+          placeholder="Ingreseña una contraseña">
+      </div>      
+      <div class="form-group">
+        <label for="">Contraseña</label>
+        <input type="text" class="form-control" id="pass" name="pass" #pass="ngModel" [(ngModel)]="usustorage.pass"
+          placeholder="Ingreseña una contraseña">
+      </div> 
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Selecciona el tipo de producto</label>   
+        <select class="form-control"  id="tipo" name="tipo" #tipo="ngModel" [(ngModel)]="usustorage.rol">
+    
+          <option value="comun">Comun</option>
+          <option value="admin">Admin</option>
+            
+        
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Actualizar </button>
+    </form>
+  </div>
+</div>

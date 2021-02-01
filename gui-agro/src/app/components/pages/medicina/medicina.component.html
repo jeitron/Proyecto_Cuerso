@@ -1,0 +1,60 @@
+<br>
+<br>
+
+<div class="d-flex flex-row">
+
+    <div class="col-3">
+
+
+      <div>
+         <a class="text-white" [routerLink]="['/comida']" >   <button type="submit" class="btn btn-primary m-2">Concentrados y alimentos</button></a>
+      </div>
+         <div>
+            <a class="text-white" [routerLink]="['/medicina']" >   <button type="submit" class="btn btn-primary m-2">Medicina veterinaria</button></a>
+         </div>
+         <div>
+            <a class="text-white" [routerLink]="['/veneno']" >   <button type="submit" class="btn btn-primary m-2">Fungicidas y pesticidas</button></a>
+         </div>
+         <div>
+            <a class="text-white" [routerLink]="['/herramientas']" >   <button type="submit" class="btn btn-primary m-2">Herramientas</button></a>
+         </div>
+         <div>
+            <a class="text-white" [routerLink]="['/animales']" >   <button type="submit" class="btn btn-primary m-2">Animasles
+                vivos</button></a>
+         </div>
+         <div>
+            <a class="text-white" [routerLink]="['/maquinaria']" >   <button type="submit" class="btn btn-primary m-2">Maquinaria</button></a>
+         </div>
+         <div>
+            <a class="text-white" [routerLink]="['/talabarteria']" >   <button type="submit" class="btn btn-primary m-2">Talabarteria</button></a>
+         </div>
+         <div class="">
+            <a class="text-white" [routerLink]="['/semillas']" >   <button type="submit" class="btn btn-primary m-2">Semillas</button></a>
+         </div>
+         <div>
+            <a class="text-white" [routerLink]="['/servicios']" >   <button type="submit" class="btn btn-primary m-2">Serivicios externos</button></a>
+         </div>
+
+         
+
+
+
+    </div>
+    
+    <div class="col-1">
+
+    </div>
+
+    <div class="col-7  justify-content-center" >
+
+      <div class="justify-content-center p-3" *ngFor="let pro of listapro">
+         <img src="" alt="" width="160" height="140"><br>
+         <label class="font-weight-bold text-break" id="produ" for="">{{pro.nombrep}}</label><br>
+         <label for=""> {{pro.precio}}</label><br>
+
+         <button class="btn btn-primary" [routerLink]="['/verproducto']" (click)="traerpro(pro)">Ver producto</button>
+
+     </div>   
+
+    </div>
+

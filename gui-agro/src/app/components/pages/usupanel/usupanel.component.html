@@ -1,0 +1,67 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+
+    <div>       
+       <a class="text-white" [routerLink]="['/usupanel']">  <button type="submit" class="btn btn-primary mr-2"> Datos del usuario </button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/cambiarpass']" > <button type="submit" class="btn btn-primary mr-2"> Cambiar contraseña</button></a>
+    </div>
+
+    <div>
+         <a class="text-white" [routerLink]="['/comprausu']" ><button type="submit" class="btn btn-primary mr-2"> Compras realizadas</button></a>
+    </div>
+    <div>
+        <a class="text-white" [routerLink]="['/favoritos']" > <button type="submit" class="btn btn-primary mr-2"> Favoritos</button></a>
+    </div>    
+
+</div>
+
+
+
+<br>
+
+<br>
+
+<H2 class="text-center"> DATOS DEL USUARIO</H2>
+<br>
+<div class="row d-flex justify-content-center">
+  <div class="col-6 ">
+
+    <form #registrodeusuarioForm="ngForm" >
+      <div class="form-group">
+        <label for="">Documento</label>
+        <input type="text" class="form-control" id="documento" name="documento" value="123456789"  placeholder="Documento del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="Juan Rios" placeholder="Nombre del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono"  value="123456"  placeholder="Telefono de contacto del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Correo</label>
+        <input type="email" class="form-control" id="correo" name="correo"  value="juan@algo.com"  placeholder="Correo de contacto del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion"  value="call 5"  placeholder="Dirección del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" name="ciudad"  value="Neiva"  placeholder="Ciudad de ubicacion del usuario">
+      </div>
+      <div class="form-group">
+        <label for="">Departamento</label>
+        <input type="text" class="form-control" id="departamento" name="departamento"  value="Huila"  placeholder="Departamento de ubicacion del usuario">
+      </div>
+      
+
+      <button type="submit" class="btn btn-primary">Actualizar datos</button>
+    </form>
+  </div>
+</div>
